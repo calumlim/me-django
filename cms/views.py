@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 
 from .models import Portfolio, ClientTestimony
 
@@ -12,3 +12,8 @@ class HomePageView(TemplateView):
         context['portfolio'] = Portfolio.objects.all()
         context['testimonies'] = ClientTestimony.objects.all()
         return context
+
+class RedirectPortfolio(DetailView):
+    model = Portfolio
+    template_name = "portfolio-redirect.html"
+    

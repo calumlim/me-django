@@ -719,7 +719,7 @@ body:after {
     position: relative;
     border-radius: 4px; }
     .item a img {
-      position: relative;
+      position: absolute;
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1);
@@ -864,3 +864,12 @@ body:after {
     color: #888888; }
     .footer a:hover {
       color: #000; }
+
+.portfolio-logo {
+  max-width: 80%;
+  position: absolute; 
+  top: 0; 
+  bottom: 0; 
+  margin-top: auto;
+  margin-bottom: auto;
+}

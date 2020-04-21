@@ -175,15 +175,13 @@
         </div>
 
         
-        <div id="posts" class="row no-gutter">
+        <div id="posts" class="row no-gutter align-items-center">
           {% for project in portfolio %}
-          <div class="item col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4 bg-white" >
-            <a href="{{ project.featured_image.url }}" class="item-wrap align-middle fancybox">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="{{ project.featured_image.url }}">
-              <p>{{ project.company_name }}</p>
-            </a>
-          </div>
+              <div class="item col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4 bg-white" style="height: 18rem; padding-left: 2rem;">
+                <a href="{% url 'cms:redirect' project.id %}" style="height: 18rem; padding-left: 2rem;">
+                  <img class="img-fluid portfolio-logo" src="{{ project.featured_image.url }}">
+                </a>
+         </div>
           {% endfor %}
 
         </div>
