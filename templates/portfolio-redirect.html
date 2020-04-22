@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container h-100 d-flex justify-content-center">
+    <div class="jumbotron my-auto">
+        <h2>This is where the portfolio project will preview!</h2>
+        <br>
+        <br>
+        <img src="{{ portfolio.featured_image.url }}" style="width: 40%; height: 20%;">
+        <h3>{{ portfolio.company_name }}</h3>
+    </div>
+</div>
+
+
+{% endblock %}
