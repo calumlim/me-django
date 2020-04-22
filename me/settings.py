@@ -126,6 +126,19 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = ( os.path.join('static'), )
 
+
 # Media files (images, videos, etc)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+# SMTP Integration (SendGrid)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_HOST = "smtp.sendgrid.net"
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "apikey"
+EMAIL_HOST_PASSWORD = "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"
+EMAIL_USE_SSL = True
+LIST_OF_EMAIL_RECIPIENTS = ['calumstah@gmail.com']
